@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="map.js"></script>
+  </head>
+  <body>
+    <h3>BETTER SAFE THAN SORRY</h3>
+	<div id="infop">
+		<p> Do you have no idea where you are? Are you visiting Los Angeles and don't want your trip to get spoiled by a rather unfortunate event? BetterSafeThanSorry gives you an optimal route depending on both the distance and the safety of a certain neighborhood. Just enter your starting and ending location to arrive your home or your hotel safely! </p>
+	</div>
+	<div id="input">
+		<input id="end-loc" type="text" placeholder="Input End Location">
+		<button id = "inputbutton">Done</button>
+	</div>
+    <div id="map"></div>
+
+    <!--not sure if the following line works-->
+    <div id="map-canvas"></div>
+
+
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-uLQDCHU4jPcmjNHmWWRF3Zdomi86hLA&libraries=places&callback=initMain" async defer></script>
+  </body>
+</html>

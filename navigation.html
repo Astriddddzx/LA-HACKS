@@ -19,8 +19,8 @@
 <div id="map-canvas"></div>
    <script language="JavaScript"  type="text/javascript">
    function initMap() {
-    var pointA = new google.maps.LatLng(34.0689, 118.4452),
-        pointB = new google.maps.LatLng(34.0224, 118.2851),
+    var pointA = new google.maps.LatLng(34.0689, -118.4452),
+        pointB = new google.maps.LatLng(34.0224, -118.2851),
         myOptions = {
             zoom: 7,
             center: pointA
@@ -86,9 +86,9 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, map, poi
         travelMode: google.maps.TravelMode.DRIVING,
         provideRouteAlternatives: true
     }, function (response, status) {
-        if (status == google.maps.DirectionsStatus.OK) 
-        { 
-   
+        if (status == google.maps.DirectionsStatus.OK)
+        {
+
           console.log(response.routes);
           for (var i = 0; i < response.routes.length || i<7; i++) {
             var a = 2, b = 1;
@@ -99,8 +99,8 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, map, poi
           }
           //directionsDisplay.setDirections(response);
 
-        } 
-        else 
+        }
+        else
         {
             window.alert('Directions request failed due to ' + status);
         }
