@@ -39,6 +39,7 @@ h3 {
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+  text-align: justify;
 }
 .logo-img{
   margin: 10px;
@@ -50,4 +51,24 @@ h3 {
   text-align: justify;
   font-size:10px;
   color: blue;
+}
+#copy-right{
+  text-align: right;
+  margin: 10px;
+}
+
+.search-button{
+  background-color: #4CAF50; /* Green */
+     border: none;
+     color: white;
+     padding: 10px 30px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 15px;
+}
+
+.text-box {
+    width: 300px;
+    height: 30px
 }

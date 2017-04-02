@@ -14,12 +14,12 @@
 <!--adds social media page-->
   <div id="navbar">
     <nav>
-      <a href="https://www.facebook.com/Better-Safe-Than-Sorry-198575203973273/"> <img class="logo-img" src="https://www.facebook.com/images/fb_icon_325x325.png"> </a>
+      <a href="https://www.facebook.com/Better-Safe-Than-Sorry-198575203973273/"> <img class="logo-img" src="https://www.facebook.com/images/fb_icon_325x325.png"></a>
+      <a href="https://github.com/Astriddddzx/LA-HACKS"> <img class="logo-img" src="https://github.com/fluidicon.png"></a>
     </nav>
   </div>
 
   <body>
-
 
 
     <h3>BETTER SAFE THAN SORRY</h3>
@@ -28,7 +28,6 @@
       Are you visiting Los Angeles and don't want your trip to get spoiled by a rather unfortunate event?
       BetterSafeThanSorry suggests an optimal route depending on both the distance and the safety of a certain neighborhood.
       Enter your destination and let us help you to arrive at your home or your hotel safely!
-
 
     </p>
 
@@ -39,8 +38,8 @@
 
   <div id="input" >
     <div id = "dest-text"><body><h2 > Enter Your destination:</h2></body></div>
-		<input id="end-loc" type="text" placeholder="Input End Location">
-		<button id = "inputbutton">Done</button>
+		<input id="end-loc" type="text" class = "text-box" placeholder="Input End Location">
+		<button class="search-button" id = "inputbutton">Go!</button>
 
 	</div>
     <div id="map"></div>
@@ -48,8 +47,9 @@
     <!--not sure if the following line works-->
     <div id="map-canvas"></div>
 
-
-
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-uLQDCHU4jPcmjNHmWWRF3Zdomi86hLA&libraries=places&callback=initMain" async defer></script>
   </body>
+  <footer id ="copy-right">
+    <p> Better Safe Than Sorry &copy 2017</p>
+  </footer>
 </html>
