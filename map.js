@@ -169,7 +169,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, map, poi
       for (var i = 0; i < response.routes.length || i<7; i++) {
         var a = 2, b = 1;
         // var directionsD = new google.maps.DirectionsRenderer({map})
-        var directionsD = new google.maps.DirectionsRenderer({ map, polylineOptions: { strokeColor: rainbow(i)} });
+        var directionsD = new google.maps.DirectionsRenderer({ map, polylineOptions: { strokeColor: rainbow(i),strokeOpacity:0.7} });
         directionsD.setDirections(response)
         directionsD.setRouteIndex(i)
       }
