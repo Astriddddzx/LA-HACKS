@@ -21,11 +21,14 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+
+            start = pos;
+
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
-            // var loc = new google.maps.Marker({ //I think this location thing gives us our current location so we need this  as our starting coordinate
-            start = new google.maps.Marker({
+            var loc = new google.maps.Marker({ //I think this location thing gives us our current location so we need this  as our starting coordinate
+            // start = new google.maps.Marker({
                 position: pos,
                 map: map
             });
@@ -40,6 +43,8 @@ function initMap() {
     }
 
 }
+
+
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
@@ -65,19 +70,21 @@ function initAutocomplete() {
 function fillInAddress() {
     // Get the place details from the autocomplete object.
     // var place = autocomplete.getPlace(); //so this place variable is our ending coordinate, what we need to do is get these geocoordinates so we can use this in the navigation part
-       end = autocomplete.getPlace();
+       end = autocomplete.getPlace().geometry.location;
 }
 
 //
 function initDirectionsMap() {
 
-  // console.log(start);
-  // console.log(end);
+  console.log(start);
+  console.log(end);
      console.log('.....')
- var pointA = new google.maps.LatLng(34.0689, -118.4452),
-     pointB = new google.maps.LatLng(34.0224, -118.2851),
- // var pointA = start,
- //     pointB = end,
+ // var pointA = new google.maps.LatLng(34.0689, -118.4452),
+ //     pointB = new google.maps.LatLng(34.0224, -118.2851),
+
+
+ var pointA = new google.maps.LatLng(start.lat,start.lng),
+     pointB = new google.maps.LatLng(end.lat(), end.lng()),
      myOptions = {
          zoom: 7,
          center: pointA
